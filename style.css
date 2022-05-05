@@ -11,18 +11,42 @@ body{
     box-shadow: 0 5px 10px rgb(217, 212, 218);
     padding: 30px 40px;
 }
-.wrapper h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-bottom: 5px;
+.wrapper h2 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 9px;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 35px;
     width: 205px;
 }
 .quotes{
     display: flex row;
+    position: relative;
     margin-bottom: 50px;
 }
+.quotes div{
+    position: relative;
+}
+.lQuote{
+    position: absolute;
+    opacity: 0.5;
+    font-size: 35px;
+    top: -22px;
+    left: -15px;
+    transform: rotate(15deg);
+    color: #00ff55;
+}
+.rQuote{
+    position: absolute;
+    opacity: 0.5;
+    font-size: 35px;
+    /* top: -22px; */
+    /* left: -15px; */
+    transform: rotate(15deg);
+    color: #00ff55;
+}
 .quotes .quote_here{
-    font-family: monospace;
+    position: relative;
+    font-family: cursive;
     font-size: 15px;
 }
 .author_name{

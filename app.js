@@ -10,14 +10,15 @@ let quoteURL = 'https://api.quotable.io/random'
 
 fetch(quoteURL).then(res => res.json())
     .then(result =>{
-        quoteBTN.innerText = result.content
+        quoteBTN.innerHTML = `<span><i class="lQuote fa-solid fa-quote-left"></i></span>${result.content}<span><i class="rQuote fa-solid fa-quote-right"></i></span>`
         authorName.innerText = `- ${result.author}`
     })
-nextQuote.addEventListener("click", ()=>{
-    nextQuote.innerText = 'Loding Quote...'
-    fetch(quoteURL).then(res => res.json())
-    .then(result =>{
-        quoteBTN.innerText = result.content
+    
+    nextQuote.addEventListener("click", ()=>{
+        nextQuote.innerText = 'Loding Quote...'
+        fetch(quoteURL).then(res => res.json())
+        .then(result =>{
+        quoteBTN.innerHTML = `<span><i class="lQuote fa-solid fa-quote-left"></i></span>${result.content}<span><i class="rQuote fa-solid fa-quote-right"></i></span>`
         authorName.innerText = `- ${result.author}`
         nextQuote.innerText = 'Next Quote'
     })
